@@ -1,0 +1,16 @@
+plugins {
+    alias(libs.plugins.spring.boot)
+    alias(libs.plugins.spring.dependency.management)
+}
+
+dependencies {
+    implementation project(':common-lib')
+    implementation libs.spring.boot.starter.web
+    implementation libs.spring.boot.starter.kafka
+    implementation libs.camel.spring.boot.starter
+    implementation libs.camel.kafka.starter
+    implementation libs.springdoc.openapi
+    
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
+}

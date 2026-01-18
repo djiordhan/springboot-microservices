@@ -1,0 +1,21 @@
+plugins {
+    alias(libs.plugins.spring.boot)
+    alias(libs.plugins.spring.dependency.management)
+}
+
+dependencies {
+    implementation project(':common-lib')
+    implementation libs.spring.boot.starter.web
+    implementation libs.spring.boot.starter.data.jpa
+    implementation libs.spring.boot.starter.data.redis
+    implementation libs.spring.boot.starter.validation
+    implementation libs.spring.boot.starter.web.services
+    implementation libs.springdoc.openapi
+    implementation libs.flyway.core
+    implementation libs.flyway.mysql
+    implementation libs.mysql.connector
+    implementation libs.wsdl4j
+    
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
+}
